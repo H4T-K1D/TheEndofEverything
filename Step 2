@@ -1,0 +1,17 @@
+import time
+import random
+from adafruit_circuitplayground.express import cpx
+
+while True:
+    cpx.pixels[select] = (255,255,255)
+    cpx.volume = volume
+
+    if (cpx.button_a) and select < 4:
+        select += 1
+        cpx.pixels[select - 1] = (0,0,0)
+        time.sleep(0.2)
+
+    if (cpx.button_b) and select > 0:
+        select -= 1
+        cpx.pixels[select + 1] = (0,0,0)
+        time.sleep(0.2)
