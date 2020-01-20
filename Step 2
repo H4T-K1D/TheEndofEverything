@@ -6,7 +6,6 @@ select = 0
 
 while True:
     cpx.pixels[select] = (255,255,255)
-    cpx.volume = volume
 
     if (cpx.button_a) and select < 4:
         select += 1
